@@ -41,7 +41,10 @@ public class SecurityConfig {
                         // Rutas públicas (sin autenticación)
                         .requestMatchers(
                                 "/api/auth/login",
-                                "/api/auth/register"
+                                "/api/auth/register",
+                                "/v3/api-docs/**",
+                                "/swagger-ui/**",
+                                "/swagger-ui.html"
                         ).permitAll()
 
                         // Rutas protegidas (requieren autenticación)
